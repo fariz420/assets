@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Reddit Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+/* Define color variables */
+:root {
+    --primary-color: #1f1f1f;
+    --secondary-color: #03dac5;
+    --text-color: #ffffff;
+    --background-color: #121212;
+}
+body{
+    background-color: var(--background-color);
+}
+
+main{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    
+}
+
+header{
+    background-color: var(--primary-color);
+    color: #ffffff;
+    display: flex;
+    margin: 1vh;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+
+header div img {
+    height: 50px;
+    border-radius: 50%;
+    /*box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.8); /* White glow effect */
+    object-fit: cover; /* Ensures the image fits well */
+    background-color: white; /* Helps blend with the glow */
+    
+}
+
+.total-container{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    width: 30vw;
+    height: fit-content;
+    padding: 40px;
+    border-radius: 25px;
+    margin-right: 40px;
+    font-size: 2em;
+}
+
+.total-container h6{
+    font-weight: 300;
+}
+
+.asset-container{
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    width: 37vw;
+    padding: 40px;
+    border-radius: 25px;
+}
+
+.total-container div{
+    display: flex;
+}
+
+.btn{
+    display: flex;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    border: 2px solid var(--secondary-color);
+    padding: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+
+.asset-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 10px 0 ;
+}
+.locker{
+    display: flex;
+    align-items: center;
+}
+.locker h3{
+    margin-left: 10px;
+    font-weight: 400;
+}
+.locker img{
+    width: 30px;
+    border-radius: 50%;
+}
+
+.account-input{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    width: 90px;
+    font-size: large;
+    
+}
+
+.account-input::-webkit-outer-spin-button,
+.account-input::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Chrome, Safari, Edge */
+    margin: 0;
+}
+
+
+/*for responsivenes*/
+@media (max-width: 900px) {
+    body {
+      font-size: 0.7em;
+    }
+    .btn{
+        display: flex;
+        color: var(--secondary-color);
+        background-color: var(--primary-color);
+        border-radius: 25px;
+        border: 2px solid var(--secondary-color);
+        padding: 5px;
+        margin-right: 5px;
+        margin-top: 10px;
+    }
+    
+
+}
+  
+@media (max-width: 825px) {
+    body {
+        font-size: 1em;
+    }
+
+    main {
+        display: block;
+    }
+    .btn{
+        display: flex;
+        color: var(--secondary-color);
+        background-color: var(--primary-color);
+        border-radius: 25px;
+        border: 2px solid var(--secondary-color);
+        padding: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+
+    .total-container, .asset-container {
+        width: 95vw;
+        margin: auto;
+        padding: 20px;
+        justify-content: center;
+    }
+    .asset-container {
+        margin-top: 10px;
+    }
+    .locker h3{
+        font-size: 1em;
+    }
+
+}
