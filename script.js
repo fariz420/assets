@@ -45,7 +45,7 @@ const assetLabels = [
 ];
 
 const chartColors = [
-  '#4285F4', '#B12F62', '#A4C2F4', '#00F3BB',
+  '#6D9EEB', '#B12F62', '#A4C2F4', '#00F3BB',
   '#EFBF04', '#34A853', '#339966', '#D8D1E8', '#E7C460'
 ];
 
