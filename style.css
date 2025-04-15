@@ -35,10 +35,10 @@ header{
     width: 100vw;
     justify-content: start;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
     margin-top: 0;
     margin-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 
@@ -73,7 +73,7 @@ header div img {
     background-color: var(--primary-color);
     width: 400px;
     padding: 40px;
-    margin-top: 10px;
+    margin-top: 20px;
     border-radius: 25px;
     font-size: 1em;
 }
