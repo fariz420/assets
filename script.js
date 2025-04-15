@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
     },
     options: {
       responsive: true,
-      cutout: '00%',
+      cutout: '50%',
       plugins: {
         legend: {
           display: false
@@ -168,7 +168,7 @@ function renderChart(bankTotal, investmentTotal, cashLendTotal) {
             type: 'doughnut',
             data: data,
             options: {
-                cutout: '0%',
+                cutout: '50%',
                 plugins: {
                     legend: {
                         display: false
