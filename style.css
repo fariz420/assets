@@ -148,7 +148,7 @@ header div img {
     border: 0px;
     margin-top: 10px;
     margin-bottom: 10px;
-    justify-content: center
+    justify-content: center;
 }
 
 
@@ -180,8 +180,13 @@ header div img {
         
     }
     
+     .asset-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
     .breakdown{
-       margin-top: 10px; 
+       margin-top: 20px; 
+       margin-bottom: 20px;
     }
     .locker h3{
         font-size: 1em;
@@ -190,7 +195,7 @@ header div img {
     .chart{
         width: 90vw;
         border: 0px;
-        margin: 20px;
+        margin: auto;
     }
 
 }
