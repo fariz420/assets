@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //button
 
 document.querySelector(".btn").addEventListener("click", () => {
-  document.querySelector(".breakdown").scrollIntoView({ behavior: "smooth" });
+  document.querySelector(".empty").scrollIntoView({ behavior: "smooth" });
 });
 
 // chart.js
