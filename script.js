@@ -36,6 +36,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//button
+
+document.querySelector(".btn").addEventListener("click", () => {
+  document.querySelector(".breakdown").scrollIntoView({ behavior: "smooth" });
+});
+
 // chart.js
 const inputs = document.querySelectorAll('.account-input');
 
