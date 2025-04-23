@@ -151,6 +151,15 @@ header div img {
     justify-content: center;
 }
 
+.money{
+    display: flex;
+    
+}
+
+.percentage, .amount{
+    font-weight: 400;
+    margin-left: 5px;
+}
 
 
 
