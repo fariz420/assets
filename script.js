@@ -97,6 +97,30 @@ window.addEventListener('DOMContentLoaded', () => {
   updateChart(); // Initial draw
 });
 
+// percentage-breakdown.js
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.asset-card');
+
+  const values = Array.from(cards).map(card => {
+    const amountTag = card.querySelector('.money h3:first-child');
+    const text = amountTag?.textContent || "";
+    const number = parseFloat(text.replace(/[₹,]/g, '').trim()) || 0;
+    return number;
+  });
+
+  const total = values.reduce((a, b) => a + b, 0);
+
+  cards.forEach((card, index) => {
+    const percentTag = card.querySelector('.money h3:nth-child(2)');
+    const value = values[index];
+    const percent = total > 0 ? ((value / total) * 100).toFixed(1) : 0;
+    if (percentTag) {
+      percentTag.textContent = `(${percent}%)`;
+    }
+  });
+});
+
 // breakdown
 let breakdownChart = null;
 
@@ -147,11 +171,20 @@ function updateChartData() {
 function updateBreakdownValues(banks, investments, cashLend) {
     const breakdownValues = document.querySelectorAll('.breakdown .money h3');
 
-    if (breakdownValues.length >= 3) {
-        breakdownValues[0].innerHTML = `₹${banks}`;
-        breakdownValues[1].innerHTML = `₹${investments}`;
-        breakdownValues[2].innerHTML = `₹${cashLend}`;
-    }
+   if (breakdownValues.length >= 6) {
+    const total = banks + investments + cashLend;
+
+    const setText = (index, amount) => {
+        const percent = total > 0 ? ((amount / total) * 100).toFixed(1) : 0;
+        breakdownValues[index].textContent = `₹${amount}`;
+        breakdownValues[index + 1].textContent = `(${percent}%)`;
+    };
+
+    setText(0, banks);       // ₹ and (%) for banks
+    setText(2, investments); // ₹ and (%) for investments
+    setText(4, cashLend);    // ₹ and (%) for cash + lend
+ }
+
 }
 
 function renderChart(bankTotal, investmentTotal, cashLendTotal) {
